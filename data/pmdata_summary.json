@@ -1,0 +1,170 @@
+{
+  "total_participants": 16,
+  "participant_details": {
+    "p01": {
+      "min_date": "2019-11-01",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 152,
+      "wellness_entries": 138,
+      "workout_sessions": 34,
+      "rhr_entries": 152,
+      "sleep_entries": 150,
+      "injury_reports": 1
+    },
+    "p02": {
+      "min_date": "2019-11-03",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 150,
+      "wellness_entries": 99,
+      "workout_sessions": 97,
+      "rhr_entries": 91,
+      "sleep_entries": 142,
+      "injury_reports": 1
+    },
+    "p03": {
+      "min_date": "2019-11-01",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 152,
+      "wellness_entries": 78,
+      "workout_sessions": 2,
+      "rhr_entries": 152,
+      "sleep_entries": 78,
+      "injury_reports": 0
+    },
+    "p04": {
+      "min_date": "2019-11-01",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 152,
+      "wellness_entries": 144,
+      "workout_sessions": 85,
+      "rhr_entries": 35,
+      "sleep_entries": 144,
+      "injury_reports": 3
+    },
+    "p05": {
+      "min_date": "2019-11-01",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 152,
+      "wellness_entries": 134,
+      "workout_sessions": 9,
+      "rhr_entries": 95,
+      "sleep_entries": 118,
+      "injury_reports": 10
+    },
+    "p06": {
+      "min_date": "2019-11-01",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 152,
+      "wellness_entries": 147,
+      "workout_sessions": 46,
+      "rhr_entries": 152,
+      "sleep_entries": 150,
+      "injury_reports": 0
+    },
+    "p07": {
+      "min_date": "2019-11-05",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 148,
+      "wellness_entries": 132,
+      "workout_sessions": 110,
+      "rhr_entries": 148,
+      "sleep_entries": 142,
+      "injury_reports": 2
+    },
+    "p08": {
+      "min_date": "2019-11-10",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 143,
+      "wellness_entries": 103,
+      "workout_sessions": 113,
+      "rhr_entries": 143,
+      "sleep_entries": 133,
+      "injury_reports": 0
+    },
+    "p09": {
+      "min_date": "2019-11-01",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 152,
+      "wellness_entries": 102,
+      "workout_sessions": 3,
+      "rhr_entries": 152,
+      "sleep_entries": 136,
+      "injury_reports": 0
+    },
+    "p10": {
+      "min_date": "2019-11-05",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 148,
+      "wellness_entries": 95,
+      "workout_sessions": 27,
+      "rhr_entries": 148,
+      "sleep_entries": 99,
+      "injury_reports": 0
+    },
+    "p11": {
+      "min_date": "2019-11-16",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 137,
+      "wellness_entries": 107,
+      "workout_sessions": 30,
+      "rhr_entries": 98,
+      "sleep_entries": 119,
+      "injury_reports": 2
+    },
+    "p12": {
+      "min_date": "2019-11-07",
+      "max_date": "2020-03-27",
+      "total_calendar_days": 142,
+      "wellness_entries": 83,
+      "workout_sessions": 40,
+      "rhr_entries": 0,
+      "sleep_entries": 8,
+      "injury_reports": 44
+    },
+    "p13": {
+      "min_date": "2019-11-11",
+      "max_date": "2020-03-24",
+      "total_calendar_days": 135,
+      "wellness_entries": 68,
+      "workout_sessions": 10,
+      "rhr_entries": 0,
+      "sleep_entries": 51,
+      "injury_reports": 0
+    },
+    "p14": {
+      "min_date": "2019-11-13",
+      "max_date": "2020-04-01",
+      "total_calendar_days": 141,
+      "wellness_entries": 124,
+      "workout_sessions": 62,
+      "rhr_entries": 140,
+      "sleep_entries": 121,
+      "injury_reports": 3
+    },
+    "p15": {
+      "min_date": "2019-11-08",
+      "max_date": "2020-04-01",
+      "total_calendar_days": 146,
+      "wellness_entries": 93,
+      "workout_sessions": 104,
+      "rhr_entries": 145,
+      "sleep_entries": 143,
+      "injury_reports": 6
+    },
+    "p16": {
+      "min_date": "2019-11-01",
+      "max_date": "2020-03-31",
+      "total_calendar_days": 152,
+      "wellness_entries": 82,
+      "workout_sessions": 11,
+      "rhr_entries": 152,
+      "sleep_entries": 147,
+      "injury_reports": 0
+    }
+  },
+  "total_rows": 2354,
+  "date_range": {
+    "min_date": "2019-11-01",
+    "max_date": "2020-04-01"
+  }
+}
