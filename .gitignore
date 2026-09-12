@@ -12,5 +12,21 @@ venv.bak/
 .env.local
 .env.*.local
 
+# Node & Build Outputs
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Tauri & Rust Targets
+src-tauri/target/
+
+# Reference Repos & Data Archives
+
+osfstorage-archive/
+*.zip
+
 # Project specific
-todo.md
+notes
+unsloth_compiled_cache/
+eval_results.json
