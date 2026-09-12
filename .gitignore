@@ -30,3 +30,5 @@ osfstorage-archive/
 notes
 unsloth_compiled_cache/
 eval_results.json
+*.gguf
+coach_merged_16bit/
