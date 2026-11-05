@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "train_file": "data/synthetic_coaching_train.jsonl",
+    "eval_file": "data/synthetic_coaching_eval.jsonl",
+    "model": "HistGradientBoostingClassifier",
+    "features": [
+      "age",
+      "max_hr",
+      "baseline_5km_s",
+      "resting_hr",
+      "rhr_delta",
+      "sleep_min",
+      "sleep_efficiency",
+      "deep_sleep_min",
+      "rem_sleep_min",
+      "wake_min",
+      "acwr",
+      "acute_load_7d",
+      "chronic_load_28d",
+      "today_load",
+      "readiness",
+      "fatigue",
+      "soreness",
+      "stress",
+      "mood",
+      "injury_reported"
+    ],
+    "train_samples": 2230,
+    "eval_samples": 235
+  },
+  "metrics": {
+    "cv_accuracy_mean": 89.6,
+    "cv_accuracy_std": 1.89,
+    "eval_accuracy": 88.51,
+    "llm_eval_accuracy": 68.51,
+    "delta_vs_llm": 20.0
+  },
+  "per_class": {
+    "MAINTAIN_PLAN": {
+      "precision": 0.885,
+      "recall": 0.9709,
+      "f1": 0.9259,
+      "support": 103
+    },
+    "SWAP_TO_ZONE2": {
+      "precision": 0.8971,
+      "recall": 0.8356,
+      "f1": 0.8652,
+      "support": 73
+    },
+    "REST_DAY": {
+      "precision": 0.8387,
+      "recall": 0.8125,
+      "f1": 0.8254,
+      "support": 32
+    },
+    "MODIFY_INTERVALS": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714,
+      "support": 5
+    },
+    "ESCALATE_TO_HUMAN": {
+      "precision": 0.9048,
+      "recall": 0.8636,
+      "f1": 0.8837,
+      "support": 22
+    }
+  },
+  "confusion_matrix": {
+    "MAINTAIN_PLAN": {
+      "MAINTAIN_PLAN": 100,
+      "SWAP_TO_ZONE2": 2,
+      "REST_DAY": 1,
+      "MODIFY_INTERVALS": 0,
+      "ESCALATE_TO_HUMAN": 0
+    },
+    "SWAP_TO_ZONE2": {
+      "MAINTAIN_PLAN": 9,
+      "SWAP_TO_ZONE2": 61,
+      "REST_DAY": 2,
+      "MODIFY_INTERVALS": 0,
+      "ESCALATE_TO_HUMAN": 1
+    },
+    "REST_DAY": {
+      "MAINTAIN_PLAN": 1,
+      "SWAP_TO_ZONE2": 4,
+      "REST_DAY": 26,
+      "MODIFY_INTERVALS": 0,
+      "ESCALATE_TO_HUMAN": 1
+    },
+    "MODIFY_INTERVALS": {
+      "MAINTAIN_PLAN": 0,
+      "SWAP_TO_ZONE2": 1,
+      "REST_DAY": 2,
+      "MODIFY_INTERVALS": 2,
+      "ESCALATE_TO_HUMAN": 0
+    },
+    "ESCALATE_TO_HUMAN": {
+      "MAINTAIN_PLAN": 3,
+      "SWAP_TO_ZONE2": 0,
+      "REST_DAY": 0,
+      "MODIFY_INTERVALS": 0,
+      "ESCALATE_TO_HUMAN": 19
+    }
+  }
+}

@@ -1,39 +1,28 @@
-# Virtual Environments
-.env
-.venv
-.venv-eval/
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Environment Variables
-.env
-.env.local
-.env.*.local
-
-# Node & Build Outputs
-node_modules/
-dist/
-dist-ssr/
-*.local
-
-# Tauri & Rust Targets
-src-tauri/target/
-
-# Data Archives
-osfstorage-archive/
-*.zip
-
-# Project specific
-notes
-unsloth_compiled_cache/
-/eval_results.json
+# Model & large artifacts
 *.gguf
 coach_merged_16bit/
+models/
+/eval_results.json
+
+# Data archives
+osfstorage-archive/
+*.zip
 
 # Python
 __pycache__/
 *.pyc
 .pytest_cache/
+.venv/
+.venv-eval/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+notes
+unsloth_compiled_cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
