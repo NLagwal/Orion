@@ -92,7 +92,7 @@ It reports:
 - rationale completeness
 - generation latency and throughput
 
-### Held-out results (235 examples)
+### LLM-only held-out results (235 examples)
 
 Model-only results, before deterministic guardrail overrides:
 
@@ -111,10 +111,40 @@ Model-only results, before deterministic guardrail overrides:
 | `MODIFY_INTERVALS` | 0.133 | 0.400 | 0.200 | 5 |
 | `ESCALATE_TO_HUMAN` | 0.783 | 0.818 | 0.800 | 22 |
 
-The weak `SWAP_TO_ZONE2` and `REST_DAY` recall is why the production system
-keeps deterministic guardrails in front of model output. `MODIFY_INTERVALS` has
-only five held-out examples; its per-class numbers are not reliable at that
-sample size.
+The weak `SWAP_TO_ZONE2` and `REST_DAY` recall is why action selection moved to
+the router. `MODIFY_INTERVALS` has only five held-out examples; its per-class
+numbers are not reliable at that sample size.
+
+### Hybrid evaluation (235 examples)
+
+Router → guardrails → LLM rationale:
+
+| Metric | Value |
+|---|---:|
+| Router action accuracy | 88.5% (208/235) |
+| Hybrid action accuracy | 88.5% (208/235) |
+| Guardrail override rate | 0.0% (0/235) |
+| JSON validity | 100.0% (235/235) |
+| Schema compliance | 100.0% (235/235) |
+| End-to-end p50 / p95 | 2.79 s / 3.10 s |
+
+The hybrid matches the router because the router already avoided the hard
+safety violations on this split. Guardrails are safety overrides, not an
+accuracy booster. They fire on injury, ACWR danger, and elevated-RHR/high-fatigue
+cases, and are covered by adversarial tests.
+
+The LLM was told the router's action and followed it in 235/235 cases. Its
+independent LLM-only accuracy remains **68.5%**, not 88.5%.
+
+Reproduce:
+
+```bash
+llama-server -m coach.gguf --host 127.0.0.1 --port 8080 -ngl 99 -c 2048
+python3 scripts/eval_hybrid.py \
+  --server_url http://127.0.0.1:8080 \
+  --max_samples 0 \
+  --output_file benchmarks/hybrid_results.json
+```
 
 `scripts/eval_qwen_lora.py` is the original Unsloth-based adapter harness. It
 requires `unsloth`, `peft`, `bitsandbytes`, and `accelerate`.
